@@ -7,7 +7,12 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>vulnerability.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="vulnerability.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BouncyCastle.Cryptography" Version="2.5.0" />
