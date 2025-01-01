@@ -79,5 +79,15 @@ namespace PlayFair_RSA_Caculator.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vulnerability {
+            get {
+                object obj = ResourceManager.GetObject("vulnerability", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
