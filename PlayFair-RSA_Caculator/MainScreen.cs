@@ -17,12 +17,6 @@ namespace PlayFair_RSA_Caculator
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(10, 80);
             panelMenu.Controls.Add(leftBorderBtn);
-
-            // Remove title bar
-            this.ControlBox = false;
-            this.Text = null;
-            this.DoubleBuffered = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
         // Actions when opening the form
@@ -119,37 +113,6 @@ namespace PlayFair_RSA_Caculator
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        // Maximize/Resize
-        private bool isMaximized = false;
-        private Rectangle previousBounds;
-        private void btnResize_Click(object sender, EventArgs e)
-        {
-            if (!isMaximized)
-            {
-                // Save previous sate of window
-                previousBounds = this.Bounds;
-
-                // Maximize window
-                this.WindowState = FormWindowState.Maximized;
-
-                // Change to resize icon
-                btnResize.IconChar = IconChar.WindowRestore;
-
-                isMaximized = true;
-            }
-            else
-            {
-                // Return to previous size
-                this.WindowState = FormWindowState.Normal;
-                this.Bounds = previousBounds;
-
-                // Change to maximize icon
-                btnResize.IconChar = IconChar.WindowMaximize;
-
-                isMaximized = false;
-            }
         }
         #endregion
 
